@@ -1,0 +1,73 @@
+GET select all users
+GET select a user
+POST create a user
+PUT  update a user
+DELETE delete a user
+
+1. POST
+http://localhost:8081/productApi/users/
+{
+	"uname":"Pushkar",
+	"mobile":"9826396465",
+	"age":20,
+	"gender":"M"
+}
+http://localhost:8081/productApi/users/
+{
+	"uname":"Amit",
+	"mobile":"9826396466",
+	"age":25,
+	"gender":"M"
+}
+http://localhost:8081/productApi/users/
+{
+	"uname":"Shefali",
+	"mobile":"9826396468",
+	"age":30,
+	"gender":"F"
+}
+
+2. GET (All Products)
+http://localhost:8081/productApi/users/
+
+3. GET (A Product)
+http://localhost:8081/productApi/users/1/
+http://localhost:8081/productApi/users/2/
+http://localhost:8081/productApi/users/3/
+
+
+4. PUT (Update Product)
+http://localhost:8081/productApi/users/5/
+OLD:
+	{
+	"uname":"Amit",
+	"mobile":"9826396466",
+	"age":25,
+	"gender":"M"
+	}
+Result:
+	{
+    "id": 5,
+    "uname": "Amit",
+    "mobile": "9826396466",
+    "age": 25,
+    "gender": "M"
+	}
+Body NEW:
+  	{
+	"uname":"Amit_Updated",
+	"mobile":"9826300000",
+	"age":26,
+	"gender":"M"
+	}
+Result:
+	{
+    "id": 5,
+    "uname": "Amit_Updated",
+    "mobile": "9826300000",
+    "age": 26,
+    "gender": "M"
+	}
+
+5. DELETE (Delete a Product)
+http://localhost:8081/productApi/users/5/

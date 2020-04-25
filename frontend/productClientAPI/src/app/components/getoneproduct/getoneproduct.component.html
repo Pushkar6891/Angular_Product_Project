@@ -1,0 +1,33 @@
+<html>
+
+<head>Get One Product</head>
+
+<body>
+  <h1>Get One Product</h1>
+  <form #getOneProductForm="ngForm" (ngSubmit)="getOneProduct(getOneProductForm.value)">
+    Enter Product ID: <input type="text" [(ngModel)]="productId" name="productId">
+    <br/>
+    <br/>
+    <input type="submit" value="search" />
+  </form>
+
+  <table *ngIf="show==true">
+    <h3>Display One Product:</h3>
+    <tr>
+      <th>Product ID:</th>
+      <th>Product Name:</th>
+      <th>Product Price:</th>
+      <th>Product Grade:</th>
+    </tr>
+    <tr>
+      <td>{{productData.id}}</td>
+      <td>{{productData.pname}}</td>
+      <td>{{productData.price}}</td>
+      <td>{{productData.grade}}</td>
+    </tr>
+  </table>
+
+</body>
+
+</html>
+<router-outlet></router-outlet>

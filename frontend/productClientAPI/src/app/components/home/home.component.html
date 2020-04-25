@@ -1,0 +1,29 @@
+<div>
+  <h1>This is a Home Dashboard Web Page</h1>
+  <h2>
+    <a routerLink="/getoneproduct">Get One Product</a>
+    <br>
+  </h2>
+  <h2>
+    <a routerLink="/getallproduct">Get All Product</a>
+    <br>
+  </h2>
+  <h2>
+    <a routerLink="/postproduct">Post Product</a>
+    <br>
+  </h2>
+  <h2>
+    <a routerLink="/putproduct">Put Product</a>
+    <br>
+  </h2>
+  <h2>
+    <a routerLink="/deleteproduct">Delete Product</a>
+    <br>
+  </h2>
+  <div>
+    <input type="button" value="logout" (click)="logout()" />
+  </div>
+  <hr>
+  <!-- Content will be changed based on path-->
+  <router-outlet></router-outlet>
+</div>

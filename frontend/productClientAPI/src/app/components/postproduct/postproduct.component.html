@@ -1,0 +1,38 @@
+<html>
+
+<head>Post Product</head>
+
+<body>
+  <h1>Post Product</h1>
+  <form #postProductForm="ngForm" (ngSubmit)="postProduct(postProductForm.value)">
+    <table>
+      <tr>
+        <td>Product Name :</td>
+        <td>
+          <input type="text" [(ngModel)]="pname" name="pname">
+        </td>
+      </tr>
+      <tr>
+        <td>Product Price :</td>
+        <td>
+          <input type="text" [(ngModel)]="price" name="price">
+        </td>
+      </tr>
+      <tr>
+        <td>Product Grade :</td>
+        <td>
+          <input type="text" [(ngModel)]="grade" name="grade">
+        </td>
+      </tr>
+    </table>
+    <input type="submit" value="post" />
+  </form>
+
+  <div *ngIf="show==true">
+    <h1>Product Name: {{pname}} has been created successfully!!!</h1>
+  </div>
+
+</body>
+
+</html>
+<router-outlet></router-outlet>

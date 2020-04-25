@@ -1,0 +1,30 @@
+<html>
+
+<head>Get All Product</head>
+
+<body>
+  <h1>Get All Product</h1>
+  <form #getAllProductForm="ngForm" (ngSubmit)="getAllProduct(getAllProductForm.value)">
+    <input type="submit" value="search" />
+  </form>
+
+  <table *ngIf="show==true">
+    <h3>Get All Product</h3>
+    <tr>
+      <th>Product ID</th>
+      <th>Product Name</th>
+      <th>Product Price</th>
+      <th>Product Grade</th>
+    </tr>
+    <tr *ngFor="let product of productData">
+      <td>{{product.id}}</td>
+      <td>{{product.pname}}</td>
+      <td>{{product.price}}</td>
+      <td>{{product.grade}}</td>
+    </tr>
+  </table>
+
+</body>
+
+</html>
+<router-outlet></router-outlet>

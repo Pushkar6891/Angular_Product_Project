@@ -1,0 +1,47 @@
+<html>
+
+<head>User Registration</head>
+
+<body>
+  <h1>User Registration</h1>
+  <form #postRegistrationForm="ngForm" (ngSubmit)="postUser(postRegistrationForm.value)">
+    <table>
+      <tr>
+        <td>User Name :</td>
+        <td>
+          <input type="text" [(ngModel)]="uname" name="uname">
+        </td>
+      </tr>
+      <tr>
+        <td>User Mobile :</td>
+        <td>
+          <input type="text" [(ngModel)]="mobile" name="mobile">
+        </td>
+      </tr>
+      <tr>
+        <td>User Age :</td>
+        <td>
+          <input type="text" [(ngModel)]="age" name="age">
+        </td>
+      </tr>
+      <tr>
+        <td>User Gender :</td>
+        <td>
+          <input type="text" [(ngModel)]="gender" name="gender">
+        </td>
+      </tr>
+    </table>
+    <input type="submit" value="post" />
+  </form>
+
+  <div *ngIf="show==true">
+    <h5>User Name: {{uname}} has been created successfully!!!</h5>
+    <h5>Please use your username:
+      <p style="color:red">{{uname}}</p> to login to the website
+    </h5>
+  </div>
+
+</body>
+
+</html>
+<router-outlet></router-outlet>

@@ -1,0 +1,57 @@
+GET select all products
+GET select a product
+POST create a product
+PUT  update a product
+DELETE delete a product
+
+http://localhost:8081/productApi/h2
+
+1. POST
+http://localhost:8081/productApi/products/
+{
+	"pname":"Redmi",
+	"price":300.0,
+	"grade":"B"
+}
+http://localhost:8081/productApi/products/
+{
+	"pname":"IPhone",
+	"price":1000.0,
+	"grade":"A"
+}
+http://localhost:8081/productApi/products/
+{
+	"pname":"HTC",
+	"price":100.0,
+	"grade":"C"
+}
+
+2. GET (All Products)
+http://localhost:8081/productApi/products/
+
+3. GET (A Product)
+http://localhost:8081/productApi/products/1/
+http://localhost:8081/productApi/products/2/
+http://localhost:8081/productApi/products/3/
+http://localhost:8081/productApi/products/4/
+http://localhost:8081/productApi/products/5/
+
+4. PUT (Update Product)
+http://localhost:8081/productApi/products/3/
+OLD:
+	{
+        "id": 3,
+        "pname": "HTC",
+        "price": 100.0,
+        "grade": "C"
+    }
+Body NEW:
+  	{
+        "id": 3,
+        "pname": "HTC_updated",
+        "price": 200.0,
+        "grade": "B"
+    }
+
+5. DELETE (Delete a Product)
+http://localhost:8081/productApi/products/1/

@@ -1,0 +1,25 @@
+<div>
+	<h1>Login Page</h1>
+	<form>
+		<table>
+			<tr>
+				<td>
+					<label><h2>UserId:</h2></label>
+				</td>
+				<td>
+					<input type="text" #unameRef />
+				</td>
+			</tr>
+
+			<tr>
+				<br>
+			</tr>
+			<tr>
+				<td>
+					<input type="button" value="Check User" (click)="checkUser(unameRef.value)"/>
+				</td>
+
+			</tr>
+		</table>
+	</form>
+</div>
